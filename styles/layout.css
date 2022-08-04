@@ -27,10 +27,27 @@ aside {
     padding-left: 20px;
     font-size: 20px;
     align-content: flex-start;
-    background-color: rgb(64, 163, 230);
+    background-color: #0ea5e9;
 }
 
+.site-logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
+.dashboard-options1--ul, .dashboard-options2--ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dashboard-options1--ul>li, .dashboard-options2--ul>li{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 /*HEADER*/
 
 header {
@@ -38,11 +55,24 @@ header {
     grid-row: 1 / span 1;
     padding: 0 40px;
     display: grid;
-    align-items: center;
-    column-gap: 30px;
+    grid-template-rows: 3fr 7fr;
     grid-template-columns: 7fr 3fr;
+    background-color: #fff;
+}
+.top-header{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    padding-top: 15px;
 }
 
+.user-notifications-div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
 .input-search-div>input {
     width: 100%;
     height: 25px;
@@ -51,12 +81,11 @@ header {
 .btn-list {
     display: flex;
     gap: 30px;
-    justify-self: end;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.username-1 {
-    justify-self: end;
-}
+
 
 
 /*MAIN*/
@@ -64,7 +93,7 @@ header {
 main {
     display: grid;
     grid-template-columns: 1fr 350px;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
     column-gap: 40px;
     padding-top: 30px;
     padding-left: 40px;
@@ -82,8 +111,9 @@ main {
 .card-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 250px;
+    grid-auto-rows: 200px;
     column-gap: 40px;
+    row-gap: 50px;
 }
 
 .buttons-list {
